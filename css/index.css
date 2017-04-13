@@ -1,0 +1,163 @@
+/*重置样式*/
+body,ul,li,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+	margin:0;
+	padding:0;
+	font-weight:normal;
+}
+a{
+	text-decoration: none;
+	color:#666;
+}
+ol,ul,li{
+	list-style: none;
+}
+img{
+	vertical-align: top;
+}
+button{
+	border:none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+/*通用样式*/
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float: right;
+}
+.clear{
+	clear:both;
+}
+.clear-after:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+/*页面样式*/
+body{
+	font:14px/20px "微软雅黑","黑体","宋体";
+	color:#666;
+	background-color:#e0e0e0;
+}
+/*页面容器*/
+.container{
+	padding:10px 200px 0 200px;
+}
+.side{
+	width:300px;
+	background-color:#00bfa5;
+	border-radius:5px 0 0 5px;
+	color:#fff;
+	padding:0 15px;
+}
+.side>.logo{
+	padding-top:40px;
+	text-align:center;
+}
+.side>.logo>img{
+	border-radius:50%;
+}
+.side>.logo>h1{
+	margin:10px 0;
+}
+.side>.side-info .side-info-item-title{
+	font-size:20px;
+	height:30px;
+	line-height: 30px;
+}
+.side-info>ul>li{
+	padding:10px 0;
+}
+.side-info>ul>li>span{
+	color:#9f3;
+}
+.side-info .side-info-item-content{
+	padding-left:30px;
+}
+.side-info-item-content>li{
+	padding:5px 0;
+}
+.side-info-item-content .text{
+	display: inline-block;
+	font-size:16px;
+}
+.side-info-item-content .rate{
+	width:120px;
+	background-color: #00796b;
+	border-radius: 20px;
+	height:20px;
+	line-height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.side-info-item-content .rate>.rate-inner{
+	border-radius: 20px;
+	background-color: #fff;height:20px;
+}
+.main{
+	margin-left:330px;
+	background-color:#f0f2f1;
+	border-radius:0 5px 5px 0;
+	padding:40px 10px 20px 10px;
+}
+.main .main-title{
+	padding:10px;
+	border-bottom:1px solid #00796b;
+	color:#00796b;
+}
+.main .main-detail{
+	padding:10px 0 5px 30px;
+}
+.main .main-detail>li{
+	font-size:18px;
+	height:30px;
+	line-height: 30px;
+}
+.main-detail .detail-k{
+	color:#000;
+}
+
+.projects>li{
+	padding-left:15px;
+}
+.projects>li>h2{
+	padding-top:10px;
+}
+.project{
+	margin-top:10px;
+	padding-left:10px;
+	border-left:2px solid #00796b;
+}
+.project .project-title{
+	display: inline-block;
+	vertical-align: top;
+	height:16px;
+	line-height: 16px;
+	font-size:16px;
+	color:#000;
+}
+.project .project-title>a{
+	color:red;
+	font-size:14px;
+	height:16px;
+	line-height: 16px;
+}
+.project .project-content{
+	padding-left:15px;
+}
+
+.project-content .notice{
+	padding-left:20px;
+	display: inline-block;
+	font-size: 12px;
+}
+
+.main-skill>li{
+	padding-left:15px;
+}
+.main-skill>li>h2{
+	padding-top: 10px;
+}

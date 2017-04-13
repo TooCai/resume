@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>崔中华的简历</title>
+		<meta charset="utf-8"/>
+		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/> -->
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body id="app">
+		<div class="container clear-after">
+			<div class="side pull-left">
+				<div class="logo">
+					<img src="images/logo.jpg">
+					<h1>
+						<span v-text="userName"></span>的简历
+					</h1>
+				</div>
+				<div class="side-info">
+					<ul>
+						<li v-for="sideInfo in sideInfos">
+							<span class="fa fa-bookmark"></span>
+							<span v-text="sideInfo.title" class="side-info-item-title"></span>
+							<ul class="side-info-item-content">
+								<li v-for="sc in sideInfo.content" class="clear-after">
+									<span class="pull-left">
+										<span v-bind:class="sc.iconClass"></span>
+										<span v-text="sc.text" class="text"></span>
+									</span>
+									<div v-if="sc.rate" class="rate pull-right">
+										<div class="rate-inner" v-bind:style="sc.rate"></div>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main">
+				<ul>
+					<li>
+						<h1 class="main-title">
+							<span class="fa fa-bookmark"></span>
+							<span>Basic Info. 基本信息</span>
+						</h1>
+						<ul class="main-detail">
+							<li v-for="ms in myselfs">
+								<span class="detail-k" v-text="ms.userK"></span>:
+								<span class="detail-v" v-text="ms.userN"></span>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h1 class="main-title">
+							<span class="fa fa-bookmark"></span>
+							<span>Experience. 项目与工作经验</span>
+						</h1>
+						<ul class="projects">
+							<li>
+								<h2>合肥汇英科技有限公司(2016.07-2017.03)</h2>
+								<div class="project">
+									<h3 class="project-title">小额贷款</h3>
+									<div class="project-content">
+										1、参与小额贷款项目的前端开发工作,根据要求完成前端页面
+										<br/>
+										2、编写sql,获取前端页面需要的数据
+										<br/>
+										3、编写后台代码(java)。通过使用springmvc将数据进行处理并传递到jsp页面
+										<br/>
+										4、根据excel表报的样式,使用jaspersoft软件设计报表
+									</div>
+								</div>
+							</li>
+							<li>
+								<h2>个人项目(2017.04)</h2>
+								<div class="project">
+									<h3 class="project-title">个人简历</h3>
+									<div class="project-content">
+										1、为了使用vue而使用vue。为了学习vue.js
+										<br/>
+										2、设计优雅、内容完善的静态简历页面
+									</div>
+								</div>
+								<div class="project">
+									<h3 class="project-title">
+										淘宝页面(2017.04)(半成品)
+										<a href="https://toocai.github.io/hua/index.html" target="_blank">
+											点击我查看
+										</a>
+									</h3>
+									<div class="project-content">
+										1、仿照淘宝页面编写静态页面
+										<br/>
+										2、其中遇到的最大的问题就是在编写轮播图的时候,使用的是CSS3,遇到了些问题:
+										<br/>
+										<span class="notice">
+											(1)当切换到另一页面后(等待一会),再次返回该页面,会出现轮播图快速的轮播,片刻之后恢复正常(问题可能是切换页面之后,定时器在执行,但动画不会执行,再次返回时,累计的动画一次执行)。如果是此问题的话,可以通过监听用户是否在当前页面,如果不在切换到别的页面,则停止定时器,切换回来,则重新开启定时器
+										</span>
+										<br/>
+										<span class="notice">
+											(2)当轮播图轮播一周后,回到初始的起点会出现轮播图倒退的情况。虽然可以使translateX(value)的value一直增加解决,但是还是希望能回到value=0deg时的状态.
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h1 class="main-title">
+							<span class="fa fa-bookmark"></span>
+							<span>Skill. 技能清单</span>
+						</h1>
+						<ul class="main-skill">
+							<li>
+								<h2>Web前端</h2>
+								<div class="project">
+									<h3 class="project-title">HTML / CSSS</h3>
+									<div class="project-content">
+										1、能够编写语义化的HTML,模块化CSS,完成页面的编写
+										<br/>
+										2、了解BootStrap等CSS框架
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="project">
+									<h3 class="project-title">JavaScript</h3>
+									<div class="project-content">
+										1、熟悉原生JavaScirpt
+										<br/>
+										2、能运用JQuery等类库编码
+										<br/>
+										3、了解Vue、Angularjs等MVVM框架
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</html>
