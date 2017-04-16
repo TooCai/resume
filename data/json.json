@@ -90,7 +90,8 @@
 		"company": "个人项目",
 		"startDate": "2017.03",
 		"endDate": "2017.03",
-		"projectTitle": "淘宝页面",
+		"projectTitle": "淘宝页面(办成品)",
+		"url":"https://toocai.github.io/hua/index.html",
 		"projectContents": [
 			"仿照淘宝页面编写静态页面",
 			"其中遇到的最大的问题就是在编写轮播图的时候,使用的是CSS3,遇到了些问题"

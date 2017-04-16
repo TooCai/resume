@@ -74,8 +74,12 @@
 						</h1>
 						<ul class="projects">
 							<li v-for="pro in projects">
-								<h2 v-if="hasEqualInProject($index)" v-text="pro.company"></h2>								<div class="project">
-									<div class="project-title" v-text="datesFormat(pro.projectTitle,pro.startDate,pro.endDate)"></div>
+								<h2 v-if="hasEqualInProject($index)" v-text="pro.company"></h2>
+								<div class="project">
+									<div class="project-title">
+										{{datesFormat(pro.projectTitle,pro.startDate,pro.endDate)}}
+										<a v-if="pro.url" href="{{pro.url}}" target="_blank">点我查看</a>
+									</div>
 									<div class="project-content">
 										<div v-for="proContent in pro.projectContents" v-text="proContent | listNum ',' $index"></div>
 										<div class="notice" v-if="pro.notices" v-for="notice in pro.notices" v-text="notice | listNum '()' $index"></div>
