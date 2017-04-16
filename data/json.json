@@ -1,0 +1,136 @@
+{
+	"userName": "崔中华",
+	"sideInfos": [{
+		"title": "Contact. 联系方式",
+		"content": [{
+			"iconClass": "fa fa-envelope",
+			"text": "邮箱:1127254551@qq.com"
+		}, {
+			"iconClass": "fa fa-qq",
+			"text": "QQ:1127254551"
+		}, {
+			"iconClass": "fa fa-mobile fa-2x",
+			"text": "Tel:18856953069"
+		}]
+	}, {
+		"title": "Application. 应聘岗位",
+		"content": [{
+			"iconClass": "",
+			"text": "前端工程师"
+		}]
+	}, {
+		"title": "Tech. 技能点",
+		"content": [{
+			"iconClass": "",
+			"text": "HTML",
+			"rate": "width:60%"
+		}, {
+			"iconClass": "",
+			"text": "CSS",
+			"rate": "width:40%"
+		}, {
+			"iconClass": "",
+			"text": "JavaScript",
+			"rate": "width:65%"
+		}, {
+			"iconClass": "",
+			"text": "Java",
+			"rate": "width:30%"
+		}]
+	}],
+	"myselfs": [{
+		"userK": "姓名",
+		"userN": "崔中华"
+	}, {
+		"userK": "性别",
+		"userN": "男"
+	}, {
+		"userK": "年龄",
+		"userN": 24
+	}, {
+		"userK": "学历",
+		"userN": "本科"
+	}, {
+		"userK": "毕业院校",
+		"userN": "合肥学院"
+	}, {
+		"userK": "专业",
+		"userN": "计算机科学与技术"
+	}],
+	"projects": [{
+		"company": "合肥汇英科技有限公司",
+		"startDate": "2016.07",
+		"endDate": "2017.03",
+		"projectTitle": "小额贷款",
+		"projectContents": [
+			"参与小额贷款项目的前端开发工作,根据要求完成前端页面",
+			"编写sql,获取前端页面需要的数据",
+			"编写后台代码(java)。通过使用springmvc将数据进行处理并传递到jsp页面",
+			"根据excel表报的样式,使用jaspersoft软件设计报表"
+		]
+	}, {
+		"company": "合肥汇英科技有限公司",
+		"startDate": "2016.09",
+		"endDate": "2017.03",
+		"projectTitle": "国元典当",
+		"projectContents": [
+			"根据要求,使用jaspersoft软件设计报表,并编写Sql从数据中获取数据在报表中展现",
+			"将部分代码重构,并进行相应的优化"
+		]
+	}, {
+		"company": "个人项目",
+		"startDate": "2017.04",
+		"endDate": "2017.04",
+		"projectTitle": "个人简历",
+		"projectContents": [
+			"为了使用vue而使用vue。为了学习vue.js",
+			"设计优雅、内容完善的静态简历页面"
+		]
+	}, {
+		"company": "个人项目",
+		"startDate": "2017.03",
+		"endDate": "2017.03",
+		"projectTitle": "淘宝页面",
+		"projectContents": [
+			"仿照淘宝页面编写静态页面",
+			"其中遇到的最大的问题就是在编写轮播图的时候,使用的是CSS3,遇到了些问题"
+		],
+		"notices": [
+			"当切换到另一页面后(等待一会),再次返回该页面,会出现轮播图快速的轮播,片刻之后恢复正常(问题可能是切换页面之后,定时器在执行,但动画不会执行,再次返回时,累计的动画一次执行)。如果是此问题的话,可以通过监听用户是否在当前页面,如果不在切换到别的页面,则停止定时器,切换回来,则重新开启定时器",
+			"当轮播图轮播一周后,回到初始的起点会出现轮播图倒退的情况。虽然可以使translateX(value)的value一直增加解决,但是还是希望能回到value=0时的状态"
+		]
+	}],
+	"skills": [{
+		"own": "Web前端",
+		"lang": "HTML / CSSS",
+		"content": [
+			"能够编写语义化的HTML,模块化CSS,完成页面的编写",
+			"了解BootStrap等CSS框架"
+		]
+	}, {
+		"own": "Web前端",
+		"lang": "JavaScript",
+		"content": [
+			"熟悉原生JavaScirpt",
+			"能运用JQuery等类库编码",
+			"了解Vue、Angularjs等MVVM框架"
+		]
+	}, {
+		"own": "Web后端",
+		"lang": "Java",
+		"content": [
+			"了解Java语言",
+			"能够使用springmvc+mybatis编写后台代码"
+		]
+	}, {
+		"own": "Web后端",
+		"lang": "Sql",
+		"content": [
+			"了解Sql语言",
+			"能够编写sql查找需要的数据"
+		]
+	}],
+	"suggest": false,
+	"searchContent": "",
+	"suggestContent": []
+}

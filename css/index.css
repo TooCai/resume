@@ -42,9 +42,86 @@ body{
 	color:#666;
 	background-color:#e0e0e0;
 }
+
+/*头部样式*/
+header{
+	height:50px;
+	line-height:50px;
+	background-color:#2c3e50;
+	padding:0 200px;
+}
+header:after{
+	content:"";
+	display:block;
+	clear: both;
+}
+.search-container{
+	float:right;
+}
+.search{
+	/*解决行内元素之间的间距问题*/
+	font-size:0;
+	position:relative;
+	right:0;
+}
+.form-container{
+	display:inline-block;
+}
+.form-container>.form-search{
+	border: none;
+	border-right:none;
+	outline:none;
+	height:36px;
+	line-height:36px;
+	display: inline-block;
+	width:300px;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:16px;
+	color:#666;
+}
+.search>.btn-search{
+	display:inline-block;
+	background-color:#3385ff;
+	width:100px;
+	height:36px;
+	line-height:36px;
+	vertical-align:middle;
+	border:none;
+	outline: none;
+	color:#fff;
+	letter-spacing:4px;
+	font-size:16px;
+}
+
+.search>.suggest-search{
+	position:absolute;
+	width:320px;
+	z-index:10;
+	background-color:#fff;
+	top:44px;
+	
+}
+.suggests-transition{
+	transition:opacity .8s ease;
+}
+.suggests-enter, .suggests-leave {
+	width:0;
+  	opacity: 0;
+}
+.search>.suggest-search>li{
+	padding:0 10px;
+	color:#000;
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+	cursor:pointer;
+	color:#5e81ca;
+}
+
 /*页面容器*/
 .container{
-	padding:10px 200px 0 200px;
+	padding:0 200px;
 }
 .side{
 	width:300px;
