@@ -54,7 +54,8 @@ header:after{
 	clear: both;
 }
 .header-container{
-	overflow: hidden;
+	/*此处会导致建议框不显示*/
+	/*overflow: hidden;*/
 }
 .search-container{
 	float:right;
