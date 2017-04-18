@@ -43,16 +43,25 @@
 			projects:[],
 			skills:[],
 			suggest: false,
+			searchShow:false,
 			searchContent: "",
 			suggestContent: []
 		},
 		methods:{
-			clickSearch:function(){
-				this.suggest = !this.suggest;
-			},
 			search:function(){
+				layer.alert("敬请期待...");
+
+				if(this.searchContent.trim().length === 0){
+					return ;
+				}
+				//判断是否有输入的内容
+				for(var i = 0,len = this.suggestContent.length;i < len;i++){
+					if(this.searchContent === this.suggestContent[i]){
+						return;
+					}
+				}
 				if(this.suggestContent.length > 5){
-					this.suggestContent.shift(this.searchContent);
+					this.suggestContent.shift();
 				}
 				this.suggestContent.push(this.searchContent);
 			},
@@ -68,6 +77,16 @@
 			},
 			datesFormat:function(title,s,e){
 				return title + "(" + s + "-" + e + ")";
+			},
+			suggestShow:function(e){
+				//判断点击的是不是搜索框
+				this.suggest = (e.target === $("input.form-search")[0]);
+			},
+			searchIconClick:function(){
+				this.searchShow = !this.searchShow;
+			},
+			searchHide:function(){
+				this.searchShow = false;
 			}
 		}
 	});

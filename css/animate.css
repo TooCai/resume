@@ -1,0 +1,18 @@
+.suggests-transition{
+	transition:opacity .8s ease;
+}
+.suggests-enter, .suggests-leave {
+	width:0;
+  	opacity: 0;
+}
+
+.sc-transition{
+	transform:translate3d(0px,0px,0px);
+	transition:transform 0.4s cubic-bezier(0,0.5,1,1.5);
+	opacity:1;
+}
+.sc-enter, .sc-leave {
+	transform:translate3d(420px,0px,0px);
+	transition:all 0.4s ease-out;
+  	opacity: 0;
+}

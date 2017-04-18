@@ -42,18 +42,19 @@ body{
 	color:#666;
 	background-color:#e0e0e0;
 }
-
 /*头部样式*/
 header{
 	height:50px;
 	line-height:50px;
 	background-color:#2c3e50;
-	padding:0 200px;
 }
 header:after{
 	content:"";
 	display:block;
 	clear: both;
+}
+.header-container{
+	overflow: hidden;
 }
 .search-container{
 	float:right;
@@ -102,13 +103,6 @@ header:after{
 	top:44px;
 	
 }
-.suggests-transition{
-	transition:opacity .8s ease;
-}
-.suggests-enter, .suggests-leave {
-	width:0;
-  	opacity: 0;
-}
 .search>.suggest-search>li{
 	padding:0 10px;
 	color:#000;
@@ -119,9 +113,30 @@ header:after{
 	color:#5e81ca;
 }
 
+.icon-container{
+	position:relative;
+	height:50px;
+}
+.search-icon{
+	position:absolute;
+	z-index:20;
+	right:0;
+}
+.search-icon>.icon-bf{
+	display:inline-block;
+	width:100px;
+	height:50px;
+	line-height:50px;
+	color:#fff;
+	text-align: center;
+	font-size:20px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
 /*页面容器*/
 .container{
-	padding:0 200px;
+	/*padding:0 200px;*/
 }
 .side{
 	width:300px;
@@ -237,4 +252,37 @@ header:after{
 }
 .main-skill>li>h2{
 	padding-top: 10px;
+}
+
+
+/*响应式*/
+@media only screen and (max-device-width:339px){
+	header,.container{
+		padding:0 5px;
+	}
+}
+@media only screen and (min-device-width:340px) and (max-device-width:500px){
+	header,.container{
+		padding:0 20px;
+	}
+}
+@media only screen and (min-device-width:501px) and (max-device-width:766px){
+	header,.container{
+		padding:0 100px;
+	}
+}
+@media only screen and (min-device-width:768px) and (max-device-width:1024px){
+	header,.container{
+		padding:0 120px;
+	}
+}
+@media only screen and (min-device-width:1025px) and (max-device-width:1366px){
+	header,.container{
+		padding:0 140px;
+	}
+}
+@media only screen and (min-device-width:1367px){
+	header,.container{
+		padding:0 200px;
+	}
 }

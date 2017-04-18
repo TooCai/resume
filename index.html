@@ -3,29 +3,35 @@
 	<head>
 		<title>崔中华的简历</title>
 		<meta charset="utf-8"/>
-		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="js/skin/default/layer.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	</head>
-	<body id="app">
-	<!--目前此处暂未处理好-->
-	<!--
+	<body id="app" v-on:click="suggestShow">
 		<header>
-			<div class="search-container">
-				<div class="search">
-					<div v-on:click="clickSearch" class="form-container">
-						<input  type="text" placeholder="请输入要查找的内容" class="form-search" v-model="searchContent"/>
+			<div class="header-container">
+				<div v-show="searchShow" class="search-container" transition="sc">
+					<div class="search">
+						<div class="form-container">
+							<input  type="text" placeholder="请输入要查找的内容" class="form-search" v-model="searchContent"/>
+						</div>
+						<button class="btn-search" v-on:click="search">搜索</button>
+						<ul transition="suggests" class="suggest-search" v-if="suggest" v-on:click="choose">
+							<li v-for="sc in suggestContent" v-text="sc | omit" data-index="{{$index}}" track-by="$index"></li>
+						</ul>
 					</div>
-					<button class="btn-search" v-on:click="search">搜索</button>
-					<ul transition="suggests" class="suggest-search" v-if="suggest" v-on:click="choose">
-						<li v-for="sc in suggestContent" v-text="sc | omit" data-index="{{$index}}"></li>
-					</ul>
+					
+				</div>
+				<div v-show="!searchShow" class="icon-container">
+					<div class="search-icon" v-on:click="searchIconClick">
+						<div class="fa fa-search icon-bf"></div>
+					</div>
 				</div>
 			</div>
 		</header>
-	-->
-		<div class="container clear-after">
+		<div class="container clear-after" v-on:click="searchHide">
 			<div class="side pull-left">
 				<div class="logo">
 					<img src="images/logo.jpg">
